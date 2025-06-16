@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemigos"))
+        if (other.CompareTag("Enemy"))
         {
             if (explosionEffect != null) // Asegura que haya efecto de partículas
             {
@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
                 enemigosDead.text = "EnemyDead: " + CantidadDead;
             }
 
-            if (CantidadDead >= 10)
+            if (CantidadDead >= 20)
             {
                 SceneManager.LoadScene(1);
             }

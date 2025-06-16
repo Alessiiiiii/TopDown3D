@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
         {
             GameObject bala = Instantiate(Bala, Spawner.position, Spawner.rotation);
             Rigidbody rbBala = bala.GetComponent<Rigidbody>();
-            rbBala.linearVelocity = Vector3.up * velocidadBala;
+            rbBala.linearVelocity = Spawner.forward * velocidadBala;
             Destroy(bala, 3f); // La bala se autodestruye tras 3 segundos
 
 
