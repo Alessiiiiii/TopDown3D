@@ -25,12 +25,12 @@
                 },
                 {
                     "name": "MousePosition",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "0db58604-27fd-40d4-b273-e70da3205dbf",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -101,37 +101,15 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Two Modifiers",
-                    "id": "5fbb54bd-8b5b-46c3-b0d7-4d507ae5d03f",
-                    "path": "TwoModifiers",
+                    "name": "",
+                    "id": "abce9266-efe7-4cd0-8cc9-788b9d2d8eac",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "MousePosition",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "modifier1",
-                    "id": "a7d58535-809b-40ad-a186-d65382d44bc1",
-                    "path": "<Mouse>/forwardButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MousePosition",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "modifier2",
-                    "id": "45553a1c-0519-4c64-b590-55b6f482e3b6",
-                    "path": "<Mouse>/backButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MousePosition",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         }

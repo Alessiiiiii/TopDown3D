@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.GraphicsBuffer;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,13 +19,28 @@ public class PlayerController : MonoBehaviour
     public Vector2 mousePosition;
     public Vector3 lookTarget;
     private CharacterController characterController;
+    [Header("Disparo")]
+    public GameObject Bala; // Prefab de la bala
+    public Transform Spawner; // Lugar desde donde se dispara
+    public float velocidadBala = 60f;
+    public int collectedItems;
+
+
+
+
+    public TMPro.TextMeshProUGUI scoreText;
+
+    public TMPro.TextMeshProUGUI GameOverText;
+
+   
 
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        GameOverText.enabled = false;
     }
 
-    void Update()
+   public void Update()
     {
         if (!characterController.isGrounded)
         {
@@ -63,6 +79,19 @@ public class PlayerController : MonoBehaviour
         {
             lookTarget = ray.GetPoint(enter);
 
+        }
+    }
+    public void OnDisparar(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            GameObject bala = Instantiate(Bala, Spawner.position, Spawner.rotation);
+            Rigidbody rbBala = bala.GetComponent<Rigidbody>();
+            rbBala.linearVelocity = Vector3.up * velocidadBala;
+            Destroy(bala, 3f); // La bala se autodestruye tras 3 segundos
+
+
+            Debug.Log("¡Disparo!");
         }
     }
 
