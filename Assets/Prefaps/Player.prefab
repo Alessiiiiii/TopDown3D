@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5732632569655660589}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +130,12 @@ MonoBehaviour:
   movementInput: {x: 0, y: 0}
   mousePosition: {x: 0, y: 0}
   lookTarget: {x: 0, y: 0, z: 0}
+  Bala: {fileID: 0}
+  Spawner: {fileID: 0}
+  velocidadBala: 60
+  collectedItems: 0
+  scoreText: {fileID: 0}
+  GameOverText: {fileID: 0}
 --- !u!114 &5732632569655660589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +193,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 32e137ca-7382-4b36-8840-33150ee29f24
     m_ActionName: 'Player/Shoot[/Keyboard/0]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0db58604-27fd-40d4-b273-e70da3205dbf
+    m_ActionName: 'Player/MousePosition[/Mouse/position]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

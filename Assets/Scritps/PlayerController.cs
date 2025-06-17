@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
 
         lookTarget.y = transform.position.y;
         transform.LookAt(lookTarget);
+        Debug.Log("Posición del jugador: " + transform.position);
 
     }
     public void OnMove(InputAction.CallbackContext context)

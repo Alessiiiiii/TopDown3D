@@ -18,14 +18,26 @@ public class Bullet : MonoBehaviour
                 GameObject effect = Instantiate(explosionEffect, other.transform.position, Quaternion.identity);
                 effect.transform.parent = null; // Evita que las partículas se destruyan con el enemigo
             }
+            if (other.gameObject != null)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Debug.LogError("Intentando destruir un objeto ya eliminado.");
+            }
 
-            Destroy(other.gameObject); // Destruye al enemigo
-            Destroy(gameObject); // Destruye la bala
+            Destroy(other.gameObject, 0.1f);
+            Destroy(gameObject, 0.1f);
 
             CantidadDead++;
             if (enemigosDead != null)
             {
                 enemigosDead.text = "EnemyDead: " + CantidadDead;
+            }
+            else
+            {
+                Debug.LogError("Texto de enemigos muertos no está asignado.");
             }
 
             if (CantidadDead >= 20)

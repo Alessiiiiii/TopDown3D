@@ -7,7 +7,8 @@ public class EnemyMovementController : MonoBehaviour
 
     public Transform playerTrasnform; // Referencia al jugador
     private NavMeshAgent navMeshAgent; // Componente NavMeshAgent para el movimiento del enemigo
-    [SerializeField] private float refreshRate = 0.5f; // Frecuencia de actualización del movimiento del enemigo
+    [SerializeField] private float refreshRate = 0.5f;// Frecuencia de actualización del movimiento del enemigo
+    public EnemySpawner spawner;
     private void Awake()
     {
         playerTrasnform = GameObject.FindWithTag("Player")?.transform;
@@ -34,3 +35,4 @@ public class EnemyMovementController : MonoBehaviour
 
 
 }
+
