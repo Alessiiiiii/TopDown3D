@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 020d32aeaf9bb964c83f96923c833aae, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 0ba06a5b533d0cd4d8574e8480a8f8a6, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &410087039
 GameObject:
@@ -3335,7 +3335,7 @@ GameObject:
   m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!136 &990463811
 CapsuleCollider:
@@ -3421,12 +3421,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990463810}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -193.2, y: 24.591484, z: -99.1}
-  m_LocalScale: {x: 5, y: 15, z: 5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.30277753, y: 52.158447, z: -0.19248441}
+  m_LocalScale: {x: 0.017234782, y: 32.168133, z: 0.024664905}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1107238477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &994212397 stripped
 Transform:
@@ -8627,6 +8627,9 @@ PrefabInstance:
       addedObject: {fileID: 140476347}
     - targetCorrespondingSourceObject: {fileID: 1303181777935181872, guid: 0c0ef25630278d946a5df138471a91f4, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 990463814}
+    - targetCorrespondingSourceObject: {fileID: 1303181777935181872, guid: 0c0ef25630278d946a5df138471a91f4, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 375862686}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c0ef25630278d946a5df138471a91f4, type: 3}
@@ -8648,5 +8651,4 @@ SceneRoots:
   - {fileID: 1644104804}
   - {fileID: 1655517402}
   - {fileID: 351550265}
-  - {fileID: 990463814}
   - {fileID: 6222429053168028112}

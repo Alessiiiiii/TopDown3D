@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
                 Debug.LogError("Texto de enemigos muertos no está asignado.");
             }
 
-            if (CantidadDead >= 25)
+            if (CantidadDead >= 15)
             {
                 SceneManager.LoadScene(2);
             }

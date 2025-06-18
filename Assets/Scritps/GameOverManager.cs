@@ -5,7 +5,8 @@ public class GameOverManager : MonoBehaviour
 {
     public void RestartGame()
     {
-        SceneManager.LoadScene(1);
+        
         Bullet.CantidadDead = 0;
+        SceneManager.LoadScene(1);
     }
 }
