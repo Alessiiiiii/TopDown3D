@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using static UnityEngine.GraphicsBuffer;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -95,5 +96,55 @@ public class PlayerController : MonoBehaviour
             Debug.Log("¡Disparo!");
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
 
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+
+            Debug.Log(GameOverText);
+            
+            SceneManager.LoadScene(2);
+        }
+
+
+        if (collision.gameObject.CompareTag("Goal"))
+        {
+            Destroy(collision.gameObject);
+
+            collectedItems++;
+            scoreText.text = collectedItems.ToString();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+
+        Debug.Log("Trigger Enter:" + other.gameObject.name);
+        if (other.gameObject.CompareTag("Goal"))
+        {
+            Destroy(other.gameObject);
+            collectedItems++;
+            scoreText.text = collectedItems.ToString();
+        }
+
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+
+            GameOverText.enabled = true;
+            
+
+        }
+
+
+
+
+    }
 }
+
+
+
+
