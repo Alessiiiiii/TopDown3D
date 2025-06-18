@@ -5,9 +5,10 @@ using TMPro;
 public class Bullet : MonoBehaviour
 {
     public int BulletDamage = 10;
-    public static int CantidadDead = 0;
+    public static int CantidadDead =0;
     public TextMeshProUGUI enemigosDead;
     public GameObject explosionEffect; // Prefab de partículas
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -40,9 +41,9 @@ public class Bullet : MonoBehaviour
                 Debug.LogError("Texto de enemigos muertos no está asignado.");
             }
 
-            if (CantidadDead >= 20)
+            if (CantidadDead >= 25)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
         }
     }

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.GraphicsBuffer;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class PlayerController : MonoBehaviour
@@ -14,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public float gravityForce;
     [Range(1f, 10f)]
     public float movementSpeed;
-
+    private Rigidbody rb;
     private float verticalVelocity;
     public Vector2 movementInput;
     public Vector2 mousePosition;
@@ -25,9 +26,6 @@ public class PlayerController : MonoBehaviour
     public Transform Spawner; // Lugar desde donde se dispara
     public float velocidadBala = 60f;
     public int collectedItems;
-
-
-
 
     public TMPro.TextMeshProUGUI scoreText;
 
@@ -105,11 +103,11 @@ public class PlayerController : MonoBehaviour
 
             Debug.Log(GameOverText);
             
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(0);
         }
 
 
-        if (collision.gameObject.CompareTag("Goal"))
+        if (collision.gameObject.CompareTag("Item"))
         {
             Destroy(collision.gameObject);
 
@@ -123,7 +121,7 @@ public class PlayerController : MonoBehaviour
 
 
         Debug.Log("Trigger Enter:" + other.gameObject.name);
-        if (other.gameObject.CompareTag("Goal"))
+        if (other.gameObject.CompareTag("Item"))
         {
             Destroy(other.gameObject);
             collectedItems++;
@@ -135,7 +133,8 @@ public class PlayerController : MonoBehaviour
         {
 
             GameOverText.enabled = true;
-            
+            SceneManager.LoadScene(0);
+
 
         }
 

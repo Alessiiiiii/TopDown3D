@@ -3,13 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
-    void Start()
+    public void RestartGame()
     {
-        Invoke("ReiniciarJuego", 5f); // Reinicia después de 5 segundos
-    }
-
-    void ReiniciarJuego()
-    {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+        Bullet.CantidadDead = 0;
     }
 }

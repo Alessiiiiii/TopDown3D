@@ -136,9 +136,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 2.2933936
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.6466968, z: 0}
 --- !u!54 &5774373242053021032
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -180,4 +180,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTrasnform: {fileID: 0}
   refreshRate: 0.5
-  spawner: {fileID: 0}
